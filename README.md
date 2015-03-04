@@ -1,8 +1,8 @@
-#NYC Restaurant Health Rating Visualization
+## NYC Restaurant Health Rating Visualization
 
 A visualization of the average number of points given to restaurants, aggregated by zipcode, cuisine type, and violation type. Data is from the [NYC Open Data portal](http://data.cityofnewyork.us/resource/xx67-kt59.json). 
 
-### To-do:
+### This is a work in progress! Still to-do:
 * Get words to wrap on bubble labels
 * Figure out ordinal D3 scale for the bubbles if possible
 * Make bar chart interactive (so that when you click a bar it will show the distribution of restaurants of that type, and the distribution of violations for restaurants of that type)
