@@ -114,6 +114,8 @@ function ready(error, data, nyc) {
     return current.y_pos;
   }, 0.0);
 
+  console.log(top_ten_violations);
+
   var bubble = bubble_svg.selectAll("g")
       .data(top_ten_violations)
     .enter().append("g")
@@ -135,8 +137,8 @@ function ready(error, data, nyc) {
     .attr("y", function(d) { 
       return -d.radius * 2 + text_height / 2 + 10; 
     })
-    .attr("font-size", text_height)
-    .call(wrap, bubble_width - top_ten_violations[0].radius * 2);
+    .attr("font-size", text_height);
+    // .call(wrap, bubble_width - top_ten_violations[0].radius * 2);
 
 
   // Map
@@ -169,7 +171,7 @@ function ready(error, data, nyc) {
   bar.append("rect")
       .attr("x", 0)
       .attr("width", function(d) { return x_scale(d.average); })
-      .attr("height", bar_height - bar_text_height/2)
+      .attr("height", bar_height - text_height/2)
       .attr("class", function(d) { return quantize(d.average)});
 
   bar.append("text")
